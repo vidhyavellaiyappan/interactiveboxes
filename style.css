@@ -1,0 +1,58 @@
+body {
+    background: linear-gradient(to right,purple,pink,plum);
+    font-family: Arial, sans-serif;
+  }
+  
+  .box {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 80px;
+    overflow: hidden;
+    transition: height 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .box h4 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .box .options {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+  
+  .box.expanded {
+    height: 200px;
+    background-color: sandybrown;
+  }
+  
+  .box.expanded .options {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .options select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .box.expanded {
+      height: 220px;
+      background-color: plum;
+    }
+  
+    .options select {
+      font-size: 16px;
+    }
+  }
+  
